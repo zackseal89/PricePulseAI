@@ -1,6 +1,17 @@
 import { NextResponse } from 'next/server';
+import { agentService } from '@/lib/agents/agent-service';
 
 export async function GET() {
+  // Simulate ADK monitoring agent
+  if (process.env.GOOGLE_ADK_API_KEY) {
+    await agentService.runAdkAgent({
+      id: 'monitor-agent',
+      name: 'Competitor Price Monitor',
+      type: 'monitor',
+      parameters: {}
+    });
+  }
+
   return NextResponse.json({
     success: true,
     data: [

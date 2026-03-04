@@ -19,7 +19,7 @@ export default function DesignSystemPage() {
           <div className="flex flex-wrap gap-5">
             {[
               { name: "Midnight Navy", color: "bg-[#0A1628]" },
-              { name: "Cyan (Primary)", color: "bg-[#05d1a8]" },
+              { name: "Cyan (Primary)", color: "bg-[#00D4AA]" },
               { name: "Lavender", color: "bg-[#8B7BFF]" },
               { name: "Coral", color: "bg-[#FF6B6B]" },
             ].map((c) => (

@@ -22,7 +22,31 @@ export interface AgentResponse<T = any> {
     duration: number;
     tokensUsed?: number;
     agentId: string;
+    runId?: string;
   };
+}
+
+export interface TinyfishRunRequest {
+  url: string;
+  goal: string;
+  parameters?: Record<string, any>;
+}
+
+export interface TinyfishRunResponse {
+  success: boolean;
+  run_id: string;
+  status: string;
+  data?: any;
+  error?: string;
+}
+
+export interface AdkConfig {
+  agentId: string;
+  credentials?: {
+    apiKey?: string;
+    projectId?: string;
+  };
+  options?: Record<string, any>;
 }
 
 export interface CompetitorData {

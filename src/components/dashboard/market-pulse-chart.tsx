@@ -27,8 +27,8 @@ export function MarketPulseChart() {
         <AreaChart data={data}>
           <defs>
             <linearGradient id="colorUs" x1="0" y1="0" x2="0" y2="100%">
-              <stop offset="5%" stopColor="#05d1a8" stopOpacity={0.3}/>
-              <stop offset="95%" stopColor="#05d1a8" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#00D4AA" stopOpacity={0.3}/>
+              <stop offset="95%" stopColor="#00D4AA" stopOpacity={0}/>
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#1e293b" opacity={0.2} />
@@ -47,7 +47,7 @@ export function MarketPulseChart() {
           <Area
             type="monotone"
             dataKey="us"
-            stroke="#05d1a8"
+            stroke="#00D4AA"
             strokeWidth={3}
             fillOpacity={1}
             fill="url(#colorUs)"
